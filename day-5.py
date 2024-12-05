@@ -71,7 +71,6 @@ def test_sum_middle_from_correct_updates_example():
     assert sum_middle_from_correct_updates("day-5-example") == 143
 
 
-
 def test_sum_middle_from_all_updates_example():
     assert sum_middle_from_fixed_updates("day-5-example") == 123
 
