@@ -6,6 +6,7 @@ RIGHT_LIST = [4, 3, 5, 3, 9, 3]
 def total_distance_between_lists(left: list[int], right: list[int]) -> int:
    return sum([abs(l - r) for l, r in zip(sorted(left), sorted(right))])
 
+
 def test_total_distance_between_lists():
     assert total_distance_between_lists(LEFT_LIST, RIGHT_LIST) == 11
 
@@ -33,13 +34,15 @@ def find_list_similarity(left: list[int], right: list[int]) -> int:
 def test_find_list_similarity():
     assert find_list_similarity(LEFT_LIST, RIGHT_LIST) == 31
 
-with open("day-1-input", "r") as input:
-    left = []
-    right = []
-    for line in input:
-        pair = line.split()
-        left.append(int(pair[0]))
-        right.append(int(pair[1]))
 
-    print(total_distance_between_lists(left, right))
-    print(find_list_similarity(left, right))
+if __name__ == "__main__":
+    with open("day-1-input", "r") as input:
+        left = []
+        right = []
+        for line in input:
+            pair = line.split()
+            left.append(int(pair[0]))
+            right.append(int(pair[1]))
+
+        print(total_distance_between_lists(left, right))
+        print(find_list_similarity(left, right))
